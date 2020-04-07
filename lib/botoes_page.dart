@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class BotoesPage extends StatefulWidget {
   @override
-  _BotoesPageState createState() => new _BotoesPageState();
+  _BotoesPageState createState() =>  _BotoesPageState();
 }
 
 class _BotoesPageState extends State<BotoesPage> {
@@ -14,33 +14,33 @@ class _BotoesPageState extends State<BotoesPage> {
     final ButtonThemeData buttonTheme = ButtonTheme.of(context).copyWith(
       shape: _buttonShape
     );
-    return new Scaffold(
-      body: new DefaultTabController(
+    return Scaffold(
+      body: DefaultTabController(
           length: 5,
           child: Scaffold(
-            appBar: new AppBar(
-              bottom: new TabBar(
+            appBar:  AppBar(
+              bottom:  TabBar(
                   tabs: [
-                    new Tab(text: 'Raised'),
-                    new Tab(text: 'Flat'),
-                    new Tab(text: 'Outline'),
-                    new Tab(text: 'Icon'),
-                    new Tab(text: 'Action')
+                     Tab(text: 'Raised'),
+                     Tab(text: 'Flat'),
+                     Tab(text: 'Outline'),
+                     Tab(text: 'Icon'),
+                     Tab(text: 'Action')
                   ]),
-              title: new Text('Botões Page')
+              title:  Text('Botões Page')
             ),
-            body: new TabBarView(children: [
-              new ButtonTheme.fromButtonThemeData(
+            body:  TabBarView(children: [
+               ButtonTheme.fromButtonThemeData(
                   data: buttonTheme,
                   child: buildRaiseButton('Raise Button adicionar dimensão a layout geralmente simples, E enfatisam funcoes em espaços ocupados ou amplos')
               ),
-              new ButtonTheme.fromButtonThemeData(
+               ButtonTheme.fromButtonThemeData(
                 data: buttonTheme,
                 child: buildFlatButton('Flat Buttom é um botão mais "clean". Recomendado para utilizar em barras de ferramentas e nas caixas de dialogos')
               ),
-              new Text('Outline'),
-              new Text('Icon'),
-              new Text('Action')
+               Text('Outline'),
+               Text('Icon'),
+               Text('Action')
             ])
           )
       ),
@@ -50,41 +50,36 @@ class _BotoesPageState extends State<BotoesPage> {
 
 Widget buildRaiseButton(title) {
   return
-      new Align(
+       Align(
         alignment: const Alignment(0.0, -0.2),
-        child: new Column(
+        child:  Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            new Text(title,
+             Text(title,
                       textAlign: TextAlign.center,
-                      style: new TextStyle(fontWeight: FontWeight.bold),
+                      style:  TextStyle(fontWeight: FontWeight.bold),
             ),
-            new ButtonBar(
+             ButtonBar(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                new RaisedButton(
+                 RaisedButton(
                   child: const Text('Raised Button'),
-                  onPressed: () {
-
-                  },
+                  onPressed: () {},
                 ),
-                new RaisedButton(
+                 RaisedButton(
                     child: const Text('Desabilitado'),
-                    onPressed: () {
-
-                    },
                 )
               ],
             ),
-            new ButtonBar(
+             ButtonBar(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                new RaisedButton.icon(
+                 RaisedButton.icon(
                     icon: const Icon(Icons.add, size: 18.0),
                     label: const Text('Raised Button'),
-                  onPressed: null,
+                  onPressed: () {},
                 ),
-                new RaisedButton.icon(
+                 RaisedButton.icon(
                     icon: const Icon(Icons.add, size: 18.0),
                     label: const Text('Desabilitado'),
                   onPressed: null,
