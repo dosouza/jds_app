@@ -42,8 +42,14 @@ class _BotoesPageState extends State<BotoesPage> {
                   data: buttonTheme,
                   child: buildOutlineButton('Outline são opacos e elevam-se quando pressionados')
               ),
-               Text('Icon'),
-               Text('Action')
+              ButtonTheme.fromButtonThemeData(
+                  data: buttonTheme,
+                  child: buildIconButton(''),
+              ),
+              ButtonTheme.fromButtonThemeData(
+                  data: buttonTheme,
+                  child: buildActionButton(''),
+              ),
             ])
           )
       ),
@@ -52,8 +58,7 @@ class _BotoesPageState extends State<BotoesPage> {
 }
 
 Widget buildRaiseButton(title) {
-  return
-       Align(
+  return Align(
         alignment: const Alignment(0.0, -0.2),
         child:  Column(
           mainAxisSize: MainAxisSize.min,
@@ -172,5 +177,33 @@ Widget buildOutlineButton(title) {
           ),
         ],
       )
+  );
+}
+
+Widget buildIconButton(title) {
+  return Align(
+      alignment: const Alignment(0.0, -0.2),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.thumb_up),
+            onPressed: () {},
+          ),
+          IconButton(
+            icon: const Icon(Icons.thumb_down),
+          )
+        ],
+      ),
+  );
+}
+
+Widget buildActionButton(title) {
+  return Align(
+    alignment: const Alignment(0.0, -0.2),
+    child: FloatingActionButton(
+      child: const Icon(Icons.add),
+      onPressed: () {},
+    ),
   );
 }
