@@ -11,7 +11,9 @@ class _ListasPageState extends State<ListasPage> {
     'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','Y','Z'
   ];
 
-  @override
+  bool _ordemReversa = false;
+
+    @override
   Widget build(BuildContext context) {
 
     Iterable<Widget> listTiles = items.map((String item) => buildListTile(context, item));
@@ -23,6 +25,15 @@ class _ListasPageState extends State<ListasPage> {
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.sort_by_alpha),
+            onPressed: () {
+              setState(() {
+                _ordemReversa = !_ordemReversa;
+                items.sort((String a, String b) => _ordemReversa ? b.compareTo(a) : a.compareTo(b));
+              });
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.more_vert),
             onPressed: () {},
           )
         ],
