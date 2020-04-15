@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import './servicos_page.dart';
 import './botoes_page.dart';
+import './listas_page.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -61,35 +63,43 @@ class _HomePageState extends State<HomePage>{
               }
             ),
             new ListTile(
-              title: new Text("Botões"),
-              trailing: new Icon(Icons.arrow_forward),
-              onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new BotoesPage()));
-              }
-            ),
-            new ListTile(
               title: new Text("Coworking"),
               trailing: new Icon(Icons.arrow_forward),
             ),
-            new Divider(),
             new ListTile(
               title: new Text("Carrinho"),
               trailing: new Icon(Icons.arrow_forward),
             ),
             new Divider(),
             new ListTile(
-              title: new Text("Sair"),
-              trailing: new Icon(Icons.close),
-              onTap: () {
+                title: new Text("Botões"),
+                trailing: new Icon(Icons.arrow_forward),
+                onTap: () {
                   Navigator.of(context).pop();
-              }
+                  Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new BotoesPage()));
+                }
+            ),
+            new ListTile(
+                title: new Text("Listas"),
+                trailing: new Icon(Icons.arrow_forward),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new ListasPage()));
+                }
+            ),
+            new Divider(),
+            new ListTile(
+                title: new Text("Sair"),
+                trailing: new Icon(Icons.close),
+                onTap: () {
+                  Navigator.of(context).pop();
+                }
             )
           ],
         )
       ),
       body: new Center(
-        child: new Text("Tecnologia")
+        child: new Text("Sophia Silva")
       )
     );
   }
