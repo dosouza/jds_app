@@ -99,7 +99,7 @@ class _HomePageState extends State<HomePage>{
         )
       ),
       body: new Center(
-        child: new Text("Sophia Silva")
+        child: new Text("JDS Tecnologia")
       )
     );
   }
