@@ -3,7 +3,6 @@ import './servicos_page.dart';
 import './botoes_page.dart';
 import './listas_page.dart';
 
-
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => new _HomePageState();
@@ -79,12 +78,12 @@ class _HomePageState extends State<HomePage>{
                   Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new BotoesPage()));
                 }
             ),
-            new ListTile(
-                title: new Text("Listas"),
-                trailing: new Icon(Icons.arrow_forward),
+            ListTile(
+                title: Text("Listas"),
+                trailing: Icon(Icons.arrow_forward),
                 onTap: () {
                   Navigator.of(context).pop();
-                  Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new ListasPage()));
+                  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => ListasPage()));
                 }
             ),
             new Divider(),
@@ -99,7 +98,7 @@ class _HomePageState extends State<HomePage>{
         )
       ),
       body: new Center(
-        child: new Text("JDS Tecnologia 2")
+        child: new Text("JDS Tecnologia 6")
       )
     );
   }
