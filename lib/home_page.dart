@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage>{
         )
       ),
       body: new Center(
-        child: new Text("JDS Tecnologia 6")
+        child: new Text("JDS Tecnologia")
       )
     );
   }
