@@ -12,8 +12,8 @@ class _ServicosPageState extends State<ServicosPage> {
 //    final ButtonThemeData buttonTheme = ButtonTheme.of(context).copyWith(
 //      shape: _buttonShape
 //    );
-    return new Scaffold(
-      appBar: new AppBar(
+    return  Scaffold(
+      appBar:  AppBar(
         title: new Text('Serviços'),
         backgroundColor: Colors.blue,
       ),

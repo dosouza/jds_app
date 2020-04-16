@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './servicos_page.dart';
 import './botoes_page.dart';
 import './listas_page.dart';
+import './cards_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -86,6 +87,14 @@ class _HomePageState extends State<HomePage>{
                   Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => ListasPage()));
                 }
             ),
+            ListTile(
+                title: Text("Cards"),
+                trailing: Icon(Icons.arrow_forward),
+                onTap: () {
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => CardsPage()));
+                }
+            ),
             new Divider(),
             new ListTile(
                 title: new Text("Sair"),
@@ -98,7 +107,7 @@ class _HomePageState extends State<HomePage>{
         )
       ),
       body: new Center(
-        child: new Text("JDS Tecnologia")
+        child: new Text("JDS Tecnologia - Aula 27")
       )
     );
   }
